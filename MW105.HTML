@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MWLF105</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+body{
+    background: black;
+
+}
+    .frame{
+        background: gray;
+        margin:30px auto;
+        border: 2px solid grey;
+        width: 500px;
+        height: 500px;
+        box-shadow: 0px 0px 10px white;
+    }
+    #circle{
+        margin: 30px auto;
+        border-radius: 40%;
+        height: 150px;
+        width: 120px;
+        /* background: black; */
+        border: 2px solid black;
+        box-shadow: 0px 0px 5px black;
+        /* display: block; */
+        /* gap: 10px; */
+    
+    }
+    .flex{
+        margin:35px auto;
+        display: flex;
+    }
+    #eye1{
+margin: auto;
+
+
+height: 30px;
+width: 30px;
+border-radius: 50%;
+background: black;
+box-shadow: 0px 0px 5px white;
+}
+#eye2{
+
+    margin: auto;
+    border-radius: 50%;
+height: 30px;
+width: 30px;
+background: black;
+box-shadow: 0px 0px 5px white;
+}
+#smile{
+    
+margin: 40px auto;
+height: 5px;
+width: 70px;
+border-radius: 50%;
+background: black;
+box-shadow: 0px 0px 5px white;
+
+}
+
+
+.login{
+    
+    /* border: 2px solid black; */
+    margin: 50px auto;
+    width: 60%;
+}
+input[type='email'],input[type='password']{
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    margin: 10px auto;
+    border: 2px solid black;
+    background: gray;
+    border-radius: 5px;
+    
+}
+input[type='button']{
+    height: 50px;
+    border-radius: 5px;
+    margin: 30px auto;
+    width: 100px;
+   font-size: 30px;
+    border: 2px solid black;
+    cursor: pointer;
+    background: gray;
+    color: black;
+}
+</style>
+<body>
+    <div class="frame">
+        <div id="circle">
+            <div class="flex">
+            <div id="eye1" ></div>
+            <div id="eye2"></div>
+        </div>
+            <div id="smile"></div>
+        </div>
+        <div class="login">
+     <input type="email" placeholder="Email" id="email" onkeydown="eye()" onkeyup="eye()">
+     <input type="password" placeholder="Password" id="pass" onkeydown="eye2()" onkeyup="eye2()"><br>
+     <input type="button" value="Login" id="login">
+    </div>
+    </div>
+</body>
+<script>
+    function eye(){
+        var eye=document.getElementById("eye1");
+        var eye2=document.getElementById("eye2");
+        eye.style.background="red";
+        eye.style.transition="1s";
+        eye2.style.background="red";
+        eye2.style.transition="3s";
+
+
+        var smile=document.getElementById("smile");
+        smile.style.background="red";
+        smile.style.transition=".5s";
+        smile.style.height="30px";
+
+        var circle=document.getElementById("circle");
+        circle.style.border="2px solid red";
+        circle.style.transition="2s";
+
+
+        var email=document.getElementById("email");
+        email.style.border="2px solid red";
+        email.style.transition="3s";
+
+        var pass=document.getElementById("pass");
+        pass.style.border="2px solid red";
+        pass.style.transition="3s";
+
+        var login=document.getElementById("login");
+        login.style.border="2px solid red";
+        login.style.color="red";
+        login.style.transition="4s";
+
+    }
+function eye2(){
+    var pass=document.getElementById("pass").value.length;
+    if(pass==8){    
+         var eye=document.getElementById("eye1");
+        var eye2=document.getElementById("eye2");
+        var circle=document.getElementById("circle");
+        eye.style.background="aqua";
+        eye.style.transition="1s";
+        eye2.style.background="aqua";
+        eye2.style.transition="1s";
+        circle.style.border="2px solid aqua";
+        circle.style.transition="2s";
+
+
+        var email=document.getElementById("email");
+        email.style.border="2px solid aqua";
+        email.style.transition="3s";
+
+        var pass=document.getElementById("pass");
+        pass.style.border="2px solid aqua";
+        pass.style.transition="3s";
+        
+        var login=document.getElementById("login");
+        login.style.border="2px solid aqua";
+        login.style.color="aqua";
+        login.style.transition="4s";
+
+        
+        var smile=document.getElementById("smile");
+        smile.style.background="aqua";
+        smile.style.height="9px";
+        smile.style.width="90px";
+        smile.style.transition="1s";
+        smile.style.rotate="3deg";
+        
+        
+    }
+  
+    console.log(pass);
+}
+</script>
+</html>
